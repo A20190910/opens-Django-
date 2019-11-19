@@ -1,0 +1,22 @@
+html>
+    <head>
+        <title>Hello</title>
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        Hello World! 云计算系<br />
+        <div>
+            {% include 'nav.html' %}
+        </div>
+        <div>
+        {% block body %}
+        
+        {% endblock %}
+        </div>
+        <div>
+        {% block footer %}
+        
+        {% endblock %}
+        </div>
+    </body>
+</html>

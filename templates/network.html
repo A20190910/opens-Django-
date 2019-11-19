@@ -1,0 +1,239 @@
+{% load mytag %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>网络</title>
+    <style>
+        .top-nav {
+            background:rgb(188, 225, 248);
+            position: fixed;
+            width: 100%;
+            height: 50px;
+            z-index: 10;
+            right: 0;
+            top: 0;
+            margin-left: 0;
+
+        }
+        .banner {
+
+            padding-top: 80px;
+            margin-right: -100px;
+            position: absolute;
+            left: 0;
+            width: 20%;
+            height: 100%;
+            float: left;
+        }
+        .banner2 {
+
+            padding-top: 100px;
+            width: 85%;
+            height: auto;
+            position: absolute;
+            top: 165px;
+            margin: 0 auto;
+            left: 200px;
+            float: right;
+        }
+        .ul1{float: left;list-style: none;}
+        .nav_li{width: auto;line-height: 50px ;float: left; font-size: 20px;}
+        .nav_li2{width: 80px;line-height: 50px ;float: right;position: absolute;right: 0; }
+        .dh-vertical{width: 200px;}
+        ul,li,a{padding: 0;margin: 0;text-decoration: none;}
+        a{color: black;}
+        a:hover{color: crimson;}
+        .li_div{width: 200px;height: 60px;background-color: rgb(241, 240, 240);margin-top: -90px;
+        border-bottom: 1px solid gray;position:absolute;float: left;text-align: left;}
+        .li_div5{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
+        border-bottom: 1px solid gray;position:absolute;float: left;top: -10px;float: left;}
+        .li_div1{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
+        border-bottom: 1px solid gray;position:absolute;float: left;top: -10px;float: left;text-align: right;}
+        .li_div2{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
+        border-bottom: 1px solid gray;position:absolute;float: left;top: 50px;float: left;text-align: right;}
+        .li_div3{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
+        border-bottom: 1px solid gray;position:absolute;float: left;top: 110px;float: left;text-align: right;}
+        .li_div4{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
+        border-bottom: 1px solid gray;position:absolute;float: left;top: 170px;float: left;text-align: right;}
+        .nav_ul2{height: auto;left:0;margin-top:50px; background-color:rgb(241, 240, 240);position: absolute;}
+        .dh-vertical{text-align: center;left: 10px;position: relative;margin-top: 50%;width: 10px;height: 30px; 
+            }
+        .dh-ver1{border-bottom: 1px solid rgb(158, 155, 155);padding:2px;
+        position: absolute;left: 220px;top: 100px;width: 1300px;height: 54px;}    
+        .network_h1{position: relative;left: 20px;float: left;height: 60px;line-height: 60px;position:absolute;
+            text-align: center; margin-top: 0;          
+        }
+        .network-name{margin-left: 350px;margin-top:30px;position:absolute;height: 30px;width: 150px;}
+        .network-field{margin-left: 520px;top:30px;position: relative;height: 25px;width: 200px;}
+        .network-field_action{margin-left:810px;top:0;position: relative;height: 30px;width: 60px;}
+        .network-top{background-color:white;width: 1300px;height: 80px;position:absolute;
+        text-align: center;top: 0;padding: 1px;left: 20px;}
+        .network-create{height: 30px;width: 100px;position: absolute;margin-left: 1110px;top:35px;}
+        .network-delete{height: 30px;width: 100px;position: absolute;margin-left: 1220px;top:30px;}
+        .tr2{height: 60px;width: 1300px;border: 1px solid rgb(182, 181, 181);padding: 1px;position:absolute;
+        left: 20px;top: 80px;background-color: rgb(222, 223, 221);}
+        .tr1{height: 60px;width: 1300px;border: 1px solid rgb(182, 181, 181);padding: 1px;
+        position:absolute;left: 20px;top: 140px;background-color: rgb(249, 250, 249);}
+        .pro_tenant{text-align: center;left: 50px;position: relative;margin-top: 50%;height: 60px;line-height: 60px;width: 40px;}
+        .pro_name{text-align: center;left: 100px;position: relative;margin-top: 50%;width: 70px;}
+        .pro_subnets{text-align: center;left: 150px;position: relative;margin-top: 50%;width: 80px;}
+        .pro_subnets1{text-align: center;left: 150px;position: relative;margin-top: 50%;width: 130px;}
+        .pro_agents{text-align: center;left:350px;position: relative;margin-top: 50%;width: 120px;}
+        .pro_agents1{text-align: center;left:300px;position: relative;margin-top: 50%;width: 120px;}
+        .pro_shared{text-align: center;left: 400px;position: relative;margin-top: 50%;width: 40px;}
+        .pro_shared1{text-align: center;left: 350px;position: relative;margin-top: 50%;width: 40px;}
+        .pro_external{text-align: center;left: 450px;position: relative;margin-top: 50%;width: 80px;}
+        .pro_status{text-align: center;left: 500px;position: relative;margin-top: 50%;width: 40px;}
+        .pro_status1{text-align: center;left: 450px;position: relative;margin-top: 50%;width: 40px;}
+        .pro_state{text-align: center;left: 550px;position: relative;margin-top: 50%;width: 80px;}
+        .pro_state1{text-align: center;left: 500px;position: relative;margin-top: 50%;width: 40px;}
+        .pro_action{text-align: center;left: 600px;position: relative;margin-top: 50%;width: 40px;}
+        .pro_action1{text-align: center;left: 580px;position: relative;margin-top: 50%;width: 40px;}
+    </style>             
+</head>
+<body>
+    <div class="top-nav">
+        <ul class="ul1">
+            <li></li>
+            <li class="nav_li">欢迎您:{{request.session.username}}</li>
+            <li class="nav_li2"><a href="loginout">退出</a></li>
+        </ul>
+    </div>
+    <div class="banner">
+        <ul class="nav_ul2">
+            <li class="li_div">  
+                <a href="index.html">
+                    管理员
+                </a>
+                <ul class="nav_ul2">
+                    <li class="li_div5">
+                        <a href="">
+                            系统
+                        </a>
+                        <ul class="nav_ul2">
+                            <li class="li_div1">
+                                <a href="instance1.html">
+                                    实例
+                                </a>
+                            </li>
+                            <li class="li_div2">
+                                <a href="">
+                                    卷
+                                </a>
+                            </li>
+                            <li class="li_div3">
+                                <a href="image.html">
+                                    映像
+                                </a>
+                            </li>
+                            <li class="li_div4">
+                                <a href="">
+                                    网络
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="dh-ver1">
+        <h1 class="network_h1">网络</h1>
+    </div>   
+    <div class="banner2">
+        <form action="" method="POST">
+            <input type="hidden" name="token" value=""/>
+            <table id="network" class="">
+                <caption>
+
+                    <div class="network-top">
+                        <input class="network-field" value="" type="text" name="network_field_q" placeholder="过滤"/>
+                        <button type="submit" class="network-field_action" id="network_action">过滤</button>
+                    </div>
+                    
+                    <a class="network-create" href="addnetwork.html" title="创建网络">创建网络</a>
+                    <button data-batch-action="true" class="network-delete" name="action" help_text="已删除的一些不可恢复" type="submit" value="network_delete">删除网络</button>
+                    
+                </caption>
+                <thead>
+                    <tr class="tr2">
+                        <th class="dh-vertical" data-selenium="multi_select">
+                            <input type="checkbox" name="obj_id"/>
+                        </th>
+                        <th class="pro_tenant" data-selenium="tenant">
+                            项目
+                        </th>
+                        <th class="pro_name" data-selenium="name">
+                            网络名称
+                        </th>
+                        <th class="pro_subnets" data-selenium="subnets">
+                            子网已连接
+                        </th>
+                        <th class="pro_agents" data-selenium="num_agents">
+                            DHCP代理程序
+                        </th>
+                        <th class="pro_shared" data-selenium="shared">
+                            共享
+                        </th>
+                        <th class="pro_external" data-selenium="external">
+                            外部
+                        </th>
+                        <th class="pro_status" data-selenium="status">
+                            状态
+                        </th>
+                        <th class="pro_state" data-selenium="admin_state" >
+                            管理状态
+                        </th>   
+                        <th class="pro_action" data-selenium="action">
+                            Actions
+                        </th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    {%for one in list%}
+                    <tr class="tr1">
+                        <td class="dh-vertical">
+                            <input type="checkbox" name="obj_id"/>
+                        </td>
+                        <td class="pro_tenant">
+                        {{plist|get_item:one.tenant_id}}
+                        </td>
+                        <td class="pro_name">
+                            {{one.name}}
+                        </td>
+                        <td class="pro_subnets1">
+                            {{one.subnets}}
+                        </td>
+                        <td class="pro_agents1">
+                            1 
+                        </td>
+                        <td class="pro_shared1">
+                            {{one.shared}} 
+                        </td>
+                        <td class="pro_external">
+                            {{one.external}}
+                        </td>
+                        <td class="pro_status1">
+                            {{one.status}}
+                        </td>
+                        <td class="pro_state1">
+                            {{one.admin_state_up}}
+                        </td>
+                        {% endfor %}
+                        <td class="pro_action1">
+                            <select>
+                                <option value="1">编辑网络</option>
+                                <option value="2">删除网络</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>           
+        </form>
+    </div>
+                           
+</body>
+</html>

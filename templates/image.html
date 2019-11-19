@@ -1,0 +1,242 @@
+{%load mytag%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>映像</title>
+    <style>
+        .top-nav {
+            background:rgb(188, 225, 248);
+            position: fixed;
+            width: 100%;
+            height: 50px;
+            z-index: 10;
+            right: 0;
+            top: 0;
+            margin-left: 0;
+
+        }
+        .banner {
+
+            padding-top: 80px;
+            margin-right: -100px;
+            position: absolute;
+            left: 0;
+            width: 200px;
+            float: left;
+        }
+        .banner2 {
+
+            padding-top: 100px;
+            width: 1400px;
+            height: auto;
+            position: absolute;
+            top: 165px;
+            margin: 0 auto;
+            left: 200px;
+            float: right;
+        }
+        .ul1{float: left;list-style: none;}
+        .nav_li{width: auto;line-height: 50px ;float: left; font-size: 20px;}
+        .nav_li2{width: 80px;line-height: 50px ;float: right;position: absolute;right: 0; }
+        .dh-vertical{width: 200px;}
+        ul,li,a{padding: 0;margin: 0;text-decoration: none;}
+        a{color: black;}
+        a:hover{color: crimson;}
+        .li_div{width: 200px;height: 60px;background-color: rgb(241, 240, 240);margin-top: -90px;
+        border-bottom: 1px solid gray;position:absolute;float: left;text-align: left;}
+        .li_div5{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
+        border-bottom: 1px solid gray;position:absolute;float: left;top: -10px;float: left;}
+        .li_div1{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
+        border-bottom: 1px solid gray;position:absolute;float: left;top: -10px;float: left;text-align: right;}
+        .li_div2{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
+        border-bottom: 1px solid gray;position:absolute;float: left;top: 50px;float: left;text-align: right;}
+        .li_div3{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
+        border-bottom: 1px solid gray;position:absolute;float: left;top: 110px;float: left;text-align: right;}
+        .li_div4{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
+        border-bottom: 1px solid gray;position:absolute;float: left;top: 170px;float: left;text-align: right;}
+        .nav_ul2{height: auto;left:0;margin-top:50px; background-color:rgb(241, 240, 240);position: absolute;}
+        .dh-vertical{text-align: center;left: 10px;position: relative;margin-top: 50%;width: 10px;height: 30px; 
+            }
+        .dh-ver1{border-bottom: 1px solid rgb(158, 155, 155);padding:2px;
+        position: absolute;left: 220px;top: 100px;width: 1300px;height: 54px;}    
+        .image_h1{position: relative;left: 20px;float: left;height: 60px;line-height: 60px;position:absolute;
+            text-align: center; margin-top: 0;          
+        }
+        .image-name{margin-left: 350px;margin-top:30px;position:absolute;height: 30px;width: 150px;}
+        .image-field{margin-left: 520px;top:30px;position: relative;height: 25px;width: 200px;}
+        .image-field_action{margin-left:810px;top:0;position: relative;height: 30px;width: 60px;}
+        .image-top{background-color:white;width: 1300px;height: 80px;position:absolute;
+        text-align: center;top: 0;padding: 1px;left: 20px;}
+        .image-create{height: 30px;width: 100px;position: absolute;margin-left: 1110px;top:35px;}
+        .image-delete{height: 30px;width: 100px;position: absolute;margin-left: 1220px;top:30px;}
+        .tr2{height: 60px;width: 1300px;border: 1px solid rgb(182, 181, 181);padding: 1px;position:absolute;
+        left: 20px;top: 80px;background-color: rgb(222, 223, 221);}
+        .tr1{height: 60px;width: 1300px;border: 1px solid rgb(182, 181, 181);padding: 1px;
+        position:absolute;left: 20px;top: 140px;background-color: rgb(249, 250, 249);}
+        .pro_tenant{text-align: center;left: 90px;position: relative;margin-top: 50%;height: 60px;line-height: 60px;width: 40px;}
+        .pro_name{text-align: center;left: 170px;position: relative;margin-top: 50%;width: 40px;}
+        .pro_type{text-align: center;left: 250px;position: relative;margin-top: 50%;width: 40px;}
+        .pro_status{text-align: center;left:330px;position: relative;margin-top: 50%;width: 40px;}
+        .pro_status{text-align: center;left:330px;position: relative;margin-top: 50%;width: 40px;}
+        .pro_public{text-align: center;left: 410px;position: relative;margin-top: 50%;width: 40px;}
+        .pro_protected{text-align: center;left: 480px;position: relative;margin-top: 50%;width: 80px;}
+        .pro_disk{text-align: center;left: 560px;position: relative;margin-top: 50%;width: 40px;}
+        .pro_disk1{text-align: center;left: 540px;position: relative;margin-top: 50%;width: 40px;}
+        .pro_size{text-align: center;left: 640px;position: relative;margin-top: 50%;width: 40px;}
+        .pro_size1{text-align: center;left: 610px;position: relative;margin-top: 50%;width: 40px;}
+        .pro_action{text-align: center;left: 720px;position: relative;margin-top: 50%;width: 40px;}
+        .pro_action1{text-align: center;left: 660px;position: relative;margin-top: 50%;width: 40px;}1
+    </style>             
+</head>
+<body>
+    <div class="top-nav">
+        <ul class="ul1">
+            <li></li>
+            <li class="nav_li">欢迎您:{{request.session.username}}</li>
+            <li class="nav_li2"><a href="loginout">退出</a></li>
+        </ul>
+    </div>
+    <div class="banner">
+        <ul class="nav_ul2">
+            <li class="li_div">  
+                <a href="index.html">
+                    管理员
+                </a>
+                <ul class="nav_ul2">
+                    <li class="li_div5">
+                        <a href="">
+                            系统
+                        </a>
+                        <ul class="nav_ul2">
+                            <li class="li_div1">
+                                <a href="instance1.html">
+                                    实例
+                                </a>
+                            </li>
+                            <li class="li_div2">
+                                <a href="">
+                                    卷
+                                </a>
+                            </li>
+                            <li class="li_div3">
+                                <a href="image.html">
+                                    映像
+                                </a>
+                            </li>
+                            <li class="li_div4">
+                                <a href="network.html">
+                                    网络
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="dh-ver1">
+        <h1 class="image_h1">映像</h1>
+    </div>   
+    <div class="banner2">
+        <form action="" method="POST">
+            <input type="hidden" name="token" value=""/>
+            <table id="images" class="">
+                <caption>
+
+                    <div class="image-top">
+                        <select name="images_field" class="image-name">
+                            <option value="name">映像名称=</option>
+                            <option value="status">状态=</option>
+                            <option value="disk_format">格式=</option>
+                            <option value="size_min">最小大小（MB）=</option>
+                            <option value="size_max">最大大小（MB）=</option>
+                        </select>
+                        <input class="image-field" value="" type="text" name="image_field_q"/>
+                        <button type="submit" class="image-field_action" id="image_action">过滤</button>
+                    </div>
+                    <a class="image-create" href="" title="创建映像">创建映像</a>
+                    <button data-batch-action="true" class="image-delete" name="action" help_text="已删除的一些不可恢复" type="submit" value="images_delete">删除映像</button>
+                    
+                </caption>
+                <thead>
+                    <tr class="tr2">
+                        <th class="dh-vertical" data-selenium="multi_select">
+                            <input type="checkbox" name="obj_id"/>
+                        </th>
+                        <th class="pro_tenant" data-selenium="tenant">
+                            项目
+                        </th>
+                        <th class="pro_name" data-selenium="name">
+                            映像名称
+                        </th>
+                        <th class="pro_type" data-selenium="image_type">
+                            类型
+                        </th>
+                        <th class="pro_status" data-selenium="status">
+                            状态
+                        </th>
+                        <th class="pro_public" data-selenium="public">
+                            公有
+                        </th>
+                        <th class="pro_protected" data-selenium="protected">
+                            受保护的
+                        </th>
+                        <th class="pro_disk" data-selenium="disk_format">
+                            格式
+                        </th>
+                        <th class="pro_size" data-selenium="size" data-type="size">
+                            大小
+                        </th>   
+                        <th class="pro_action" data-selenium="action">
+                            Action
+                        </th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for one in list %}
+                    <tr class="tr1">
+                        <td class="dh-vertical">
+                            <input type="checkbox" name="obj_id"/>
+                        </td>
+                        <td class="pro_tenant">
+                            {{plist|get_item:one.owner}}
+                        </td>
+                        <td class="pro_name">
+                            {{one.name}}
+                        </td>
+                        <td class="pro_type">
+                            镜像
+                        </td>
+                        <td class="pro_status">
+                            {{one.status}} 
+                        </td>
+                        <td class="pro_public">
+                            {{one.visibility}} 
+                        </td>
+                        <td class="pro_protected">
+                            {{one.protected}}
+                        </td>
+                        <td class="pro_disk1">
+                            {{one.disk_format}} 
+                        </td>
+                        <td class="pro_size1">
+                            {{one.size}}
+                        </td>
+                        {% endfor %}
+                        <td class="pro_action1">
+                            <select>
+                                <option value="1">编辑映像</option>
+                                <option value="2">更新元数据</option>
+                            </select>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>           
+        </form>
+    </div>
+                           
+</body>
+</html>
