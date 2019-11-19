@@ -169,15 +169,15 @@ def instance(request):
                 ilist[one['id']]=one['name']
             context['ilist']=ilist
         instanceslist = instancesxx.json()
-        print(instanceslist)
+        #print(instanceslist)
         if not instanceslist.has_key('servers'):
             return HttpResponse('查找错误，请稍后重试！')
         context['list'] = instanceslist['servers'] 
         context['image'] =  instanceslist['servers'][0]['image']
-        ins_id = instanceslist['servers'][0]['id']
-        print(ins_id)
+        #ins_id = instanceslist['servers'][0]['id']
+        #print(ins_id)
         context['address'] = instanceslist['servers'][0]['addresses']['provider'][0]['addr']
-        context['name1'] = instanceslist['servers'][0]['name']
+        #context['name1'] = instanceslist['servers'][0]['name']
         flavor = requests.get(settings.INSTANCE+'/v2.1/flavors',headers=headers)
         if flavor.status_code==200:
             flavor = flavor.json()
@@ -192,7 +192,7 @@ def instance(request):
         flavor1 = instanceslist['servers'][0]['flavor']
         context['flavor'] = flavor1 
         #request.session['id'] = flavor1 
-        key_name = instanceslist['servers'][0]['key_name']
+        #key_name = instanceslist['servers'][0]['key_name']
         if key_name == None:
             context['key_name'] = "-"
         else:

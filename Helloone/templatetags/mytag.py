@@ -25,7 +25,7 @@ def time_since(value):
         days = int(timestamp / 60 / 60 / 24)
         return '%s 天' % days
     elif timestamp>60*60*24*30 and timestamp<60*60*24*30*12:
-        if not int(timestamp%(60*60*24*30))==0:
+        if not int(timestamp%(60*60*24*30)) == 0:
             months = int(timestamp/(60*60*24*30))
             weeks=int((timestamp-months*(60*60*24*30))/(60*60*24*7))
             return "%s月,"%months+"%s周"%weeks
