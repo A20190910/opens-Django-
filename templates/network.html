@@ -1,4 +1,5 @@
 {% load mytag %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,139 +7,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>网络</title>
-    <style>
-        .top-nav {
-            background:rgb(188, 225, 248);
-            position: fixed;
-            width: 100%;
-            height: 50px;
-            z-index: 10;
-            right: 0;
-            top: 0;
-            margin-left: 0;
-
-        }
-        .banner {
-
-            padding-top: 80px;
-            margin-right: -100px;
-            position: absolute;
-            left: 0;
-            width: 20%;
-            height: 100%;
-            float: left;
-        }
-        .banner2 {
-
-            padding-top: 100px;
-            width: 85%;
-            height: auto;
-            position: absolute;
-            top: 165px;
-            margin: 0 auto;
-            left: 200px;
-            float: right;
-        }
-        .ul1{float: left;list-style: none;}
-        .nav_li{width: auto;line-height: 50px ;float: left; font-size: 20px;}
-        .nav_li2{width: 80px;line-height: 50px ;float: right;position: absolute;right: 0; }
-        .dh-vertical{width: 200px;}
-        ul,li,a{padding: 0;margin: 0;text-decoration: none;}
-        a{color: black;}
-        a:hover{color: crimson;}
-        .li_div{width: 200px;height: 60px;background-color: rgb(241, 240, 240);margin-top: -90px;
-        border-bottom: 1px solid gray;position:absolute;float: left;text-align: left;}
-        .li_div5{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
-        border-bottom: 1px solid gray;position:absolute;float: left;top: -10px;float: left;}
-        .li_div1{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
-        border-bottom: 1px solid gray;position:absolute;float: left;top: -10px;float: left;text-align: right;}
-        .li_div2{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
-        border-bottom: 1px solid gray;position:absolute;float: left;top: 50px;float: left;text-align: right;}
-        .li_div3{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
-        border-bottom: 1px solid gray;position:absolute;float: left;top: 110px;float: left;text-align: right;}
-        .li_div4{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
-        border-bottom: 1px solid gray;position:absolute;float: left;top: 170px;float: left;text-align: right;}
-        .nav_ul2{height: auto;left:0;margin-top:50px; background-color:rgb(241, 240, 240);position: absolute;}
-        .dh-vertical{text-align: center;left: 10px;position: relative;margin-top: 50%;width: 10px;height: 30px; 
-            }
-        .dh-ver1{border-bottom: 1px solid rgb(158, 155, 155);padding:2px;
-        position: absolute;left: 220px;top: 100px;width: 1300px;height: 54px;}    
-        .network_h1{position: relative;left: 20px;float: left;height: 60px;line-height: 60px;position:absolute;
-            text-align: center; margin-top: 0;          
-        }
-        .network-name{margin-left: 350px;margin-top:30px;position:absolute;height: 30px;width: 150px;}
-        .network-field{margin-left: 520px;top:30px;position: relative;height: 25px;width: 200px;}
-        .network-field_action{margin-left:810px;top:0;position: relative;height: 30px;width: 60px;}
-        .network-top{background-color:white;width: 1300px;height: 80px;position:absolute;
-        text-align: center;top: 0;padding: 1px;left: 20px;}
-        .network-create{height: 30px;width: 100px;position: absolute;margin-left: 1110px;top:35px;}
-        .network-delete{height: 30px;width: 100px;position: absolute;margin-left: 1220px;top:30px;}
-        .tr2{height: 60px;width: 1300px;border: 1px solid rgb(182, 181, 181);padding: 1px;position:absolute;
-        left: 20px;top: 80px;background-color: rgb(222, 223, 221);}
-        .tr1{height: 60px;width: 1300px;border: 1px solid rgb(182, 181, 181);padding: 1px;
-        position:absolute;left: 20px;top: 140px;background-color: rgb(249, 250, 249);}
-        .pro_tenant{text-align: center;left: 50px;position: relative;margin-top: 50%;height: 60px;line-height: 60px;width: 40px;}
-        .pro_name{text-align: center;left: 100px;position: relative;margin-top: 50%;width: 70px;}
-        .pro_subnets{text-align: center;left: 150px;position: relative;margin-top: 50%;width: 80px;}
-        .pro_subnets1{text-align: center;left: 150px;position: relative;margin-top: 50%;width: 130px;}
-        .pro_agents{text-align: center;left:350px;position: relative;margin-top: 50%;width: 120px;}
-        .pro_agents1{text-align: center;left:300px;position: relative;margin-top: 50%;width: 120px;}
-        .pro_shared{text-align: center;left: 400px;position: relative;margin-top: 50%;width: 40px;}
-        .pro_shared1{text-align: center;left: 350px;position: relative;margin-top: 50%;width: 40px;}
-        .pro_external{text-align: center;left: 450px;position: relative;margin-top: 50%;width: 80px;}
-        .pro_status{text-align: center;left: 500px;position: relative;margin-top: 50%;width: 40px;}
-        .pro_status1{text-align: center;left: 450px;position: relative;margin-top: 50%;width: 40px;}
-        .pro_state{text-align: center;left: 550px;position: relative;margin-top: 50%;width: 80px;}
-        .pro_state1{text-align: center;left: 500px;position: relative;margin-top: 50%;width: 40px;}
-        .pro_action{text-align: center;left: 600px;position: relative;margin-top: 50%;width: 40px;}
-        .pro_action1{text-align: center;left: 580px;position: relative;margin-top: 50%;width: 40px;}
-    </style>             
+    <link rel="stylesheet" href="{% static 'js/network.css' %}">
+           
 </head>
 <body>
-    <div class="top-nav">
-        <ul class="ul1">
-            <li></li>
-            <li class="nav_li">欢迎您:{{request.session.username}}</li>
-            <li class="nav_li2"><a href="loginout">退出</a></li>
-        </ul>
-    </div>
-    <div class="banner">
-        <ul class="nav_ul2">
-            <li class="li_div">  
-                <a href="index.html">
-                    管理员
-                </a>
-                <ul class="nav_ul2">
-                    <li class="li_div5">
-                        <a href="">
-                            系统
-                        </a>
-                        <ul class="nav_ul2">
-                            <li class="li_div1">
-                                <a href="instance1.html">
-                                    实例
-                                </a>
-                            </li>
-                            <li class="li_div2">
-                                <a href="">
-                                    卷
-                                </a>
-                            </li>
-                            <li class="li_div3">
-                                <a href="image.html">
-                                    映像
-                                </a>
-                            </li>
-                            <li class="li_div4">
-                                <a href="">
-                                    网络
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-            </li>
-        </ul>
+    <div>
+        {% include 'index.html' %}
     </div>
     <div class="dh-ver1">
         <h1 class="network_h1">网络</h1>
@@ -204,9 +78,12 @@
                         <td class="pro_name">
                             {{one.name}}
                         </td>
+                        {%for i in one.subnets%}
                         <td class="pro_subnets1">
-                            {{one.subnets}}
+                            {{slist|get_item:i}}
+                            {{slist1|get_item:i}}
                         </td>
+                        {%endfor%}
                         <td class="pro_agents1">
                             1 
                         </td>
@@ -214,7 +91,7 @@
                             {{one.shared}} 
                         </td>
                         <td class="pro_external">
-                            {{one.external}}
+                            {{external}}
                         </td>
                         <td class="pro_status1">
                             {{one.status}}

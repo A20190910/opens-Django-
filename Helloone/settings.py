@@ -114,6 +114,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+#STATIC_ROOT = os.path.join(BASE_DIR,'static')
 
 SESSION_ENGINE = 'django.contrib.sessions.backends.file'
 SESSION_FILE_PATH = None
@@ -128,7 +129,7 @@ SESSION_SAVE_EVERY_REQUEST = False
 
 OP_HOST = 'http://192.168.119.128'
 KEYSTORN = OP_HOST+':5000'
-IMAGES = OP_HOST+':9292'
-NETWORK = OP_HOST+':9696'
-INSTANCE = OP_HOST+':8774'
+GLANCE = OP_HOST+':9292'
+NEUTRON = OP_HOST+':9696'
+NOVA = OP_HOST+':8774'
 

@@ -1,0 +1,82 @@
+.top-nav {
+    background:rgb(188, 225, 248);
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    z-index: 10;
+    right: 0;
+    top: 0;
+    margin-left: 0;
+
+}
+.banner {
+
+    padding-top: 80px;
+    margin-right: -100px;
+    position: absolute;
+    left: 0;
+    width: 200px;
+    float: left;
+}
+.banner2 {
+
+    padding-top: 100px;
+    width: 1400px;
+    height: auto;
+    position: absolute;
+    top: 165px;
+    margin: 0 auto;
+    left: 200px;
+    float: right;
+}
+.ul1{float: left;list-style: none;}
+.nav_li{width: auto;line-height: 50px ;float: left; font-size: 20px;}
+.nav_li2{width: 80px;line-height: 50px ;float: right;position: absolute;right: 0; }
+.dh-vertical{width: 200px;}
+ul,li,a{padding: 0;margin: 0;text-decoration: none;}
+a{color: black;}
+a:hover{color: crimson;}
+.li_div{width: 200px;height: 60px;background-color: rgb(241, 240, 240);margin-top: -90px;
+border-bottom: 1px solid gray;position:absolute;float: left;text-align: left;}
+.li_div5{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
+border-bottom: 1px solid gray;position:absolute;float: left;top: -10px;float: left;}
+.li_div1{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
+border-bottom: 1px solid gray;position:absolute;float: left;top: -10px;float: left;text-align: right;}
+.li_div2{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
+border-bottom: 1px solid gray;position:absolute;float: left;top: 50px;float: left;text-align: right;}
+.li_div3{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
+border-bottom: 1px solid gray;position:absolute;float: left;top: 110px;float: left;text-align: right;}
+.li_div4{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
+border-bottom: 1px solid gray;position:absolute;float: left;top: 170px;float: left;text-align: right;}
+.nav_ul2{height: auto;left:0;margin-top:50px; background-color:rgb(241, 240, 240);position: absolute;}
+.dh-vertical{text-align: center;left: 10px;position: relative;margin-top: 50%;width: 10px;height: 30px; 
+    }
+.dh-ver1{border-bottom: 1px solid rgb(158, 155, 155);padding:2px;
+position: absolute;left: 220px;top: 100px;width: 1300px;height: 54px;}    
+.image_h1{position: relative;left: 20px;float: left;height: 60px;line-height: 60px;position:absolute;
+    text-align: center; margin-top: 0;          
+}
+.image-name{margin-left: 350px;margin-top:30px;position:absolute;height: 30px;width: 150px;}
+.image-field{margin-left: 520px;top:30px;position: relative;height: 25px;width: 200px;}
+.image-field_action{margin-left:810px;top:0;position: relative;height: 30px;width: 60px;}
+.image-top{background-color:white;width: 1300px;height: 80px;position:absolute;
+text-align: center;top: 0;padding: 1px;left: 20px;}
+.image-create{height: 30px;width: 100px;position: absolute;margin-left: 1110px;top:35px;}
+.image-delete{height: 30px;width: 100px;position: absolute;margin-left: 1220px;top:30px;}
+.tr2{height: 60px;width: 1300px;border: 1px solid rgb(182, 181, 181);padding: 1px;position:absolute;
+left: 20px;top: 80px;background-color: rgb(222, 223, 221);}
+.tr1{height: 60px;width: 1300px;border: 1px solid rgb(182, 181, 181);padding: 1px;
+position:absolute;left: 20px;top: 140px;background-color: rgb(249, 250, 249);}
+.pro_tenant{text-align: center;left: 90px;position: relative;margin-top: 50%;height: 60px;line-height: 60px;width: 40px;}
+.pro_name{text-align: center;left: 170px;position: relative;margin-top: 50%;width: 40px;}
+.pro_type{text-align: center;left: 250px;position: relative;margin-top: 50%;width: 40px;}
+.pro_status{text-align: center;left:330px;position: relative;margin-top: 50%;width: 40px;}
+.pro_status{text-align: center;left:330px;position: relative;margin-top: 50%;width: 40px;}
+.pro_public{text-align: center;left: 410px;position: relative;margin-top: 50%;width: 40px;}
+.pro_protected{text-align: center;left: 480px;position: relative;margin-top: 50%;width: 80px;}
+.pro_disk{text-align: center;left: 560px;position: relative;margin-top: 50%;width: 40px;}
+.pro_disk1{text-align: center;left: 540px;position: relative;margin-top: 50%;width: 40px;}
+.pro_size{text-align: center;left: 640px;position: relative;margin-top: 50%;width: 40px;}
+.pro_size1{text-align: center;left: 610px;position: relative;margin-top: 50%;width: 40px;}
+.pro_action{text-align: center;left: 720px;position: relative;margin-top: 50%;width: 40px;}
+.pro_action1{text-align: center;left: 660px;position: relative;margin-top: 50%;width: 40px;}

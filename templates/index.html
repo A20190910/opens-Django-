@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,60 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>映像</title>
-    <style>
-        .top-nav {
-            background:rgb(188, 225, 248);
-            position: fixed;
-            width: 100%;
-            height: 50px;
-            z-index: 10;
-            right: 0;
-            top: 0;
-            margin-left: 0;
-
-        }
-        .banner {
-
-            padding-top: 80px;
-            margin-right: -100px;
-            position: absolute;
-            left: 0;
-            width: 200px;
-            float: left;
-        }
-        .banner2 {
-
-            padding-top: 100px;
-            width: 1400px;
-            height: auto;
-            position: absolute;
-            top: 165px;
-            margin: 0 auto;
-            left: 200px;
-            float: right;
-        }
-        .ul1{float: left;list-style: none;}
-        .nav_li{width: auto;line-height: 50px ;float: left; font-size: 20px;}
-        .nav_li2{width: 80px;line-height: 50px ;float: right;position: absolute;right: 0; }
-        .dh-vertical{width: 200px;}
-        ul,li,a{padding: 0;margin: 0;text-decoration: none;}
-        a{color: black;}
-        a:hover{color: crimson;}
-        .li_div{width: 200px;height: 60px;background-color: rgb(241, 240, 240);margin-top: -90px;
-        border-bottom: 1px solid gray;position:absolute;float: left;text-align: left;}
-        .li_div5{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
-        border-bottom: 1px solid gray;position:absolute;float: left;top: -10px;float: left;}
-        .li_div1{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
-        border-bottom: 1px solid gray;position:absolute;float: left;top: -10px;float: left;text-align: right;}
-        .li_div2{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
-        border-bottom: 1px solid gray;position:absolute;float: left;top: 50px;float: left;text-align: right;}
-        .li_div3{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
-        border-bottom: 1px solid gray;position:absolute;float: left;top: 110px;float: left;text-align: right;}
-        .li_div4{width: 200px;height: 60px;background-color: rgb(241, 240, 240);
-        border-bottom: 1px solid gray;position:absolute;float: left;top: 170px;float: left;text-align: right;}
-        .nav_ul2{height: auto;left:0;margin-top:50px; background-color:rgb(241, 240, 240);position: absolute;}
-        
-    </style>             
+    <link rel="stylesheet" href="{% static 'js/index.css' %}">
 </head>
 <body>
     <div class="top-nav">
@@ -71,7 +19,7 @@
     <div class="banner">
         <ul class="nav_ul2">
             <li class="li_div">  
-                <a href="">
+                <a href="index.html">
                     管理员
                 </a>
                 <ul class="nav_ul2">

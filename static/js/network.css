@@ -1,0 +1,32 @@
+
+.dh-ver1{border-bottom: 1px solid rgb(158, 155, 155);padding:2px;
+position: absolute;left: 220px;top: 100px;width: 1300px;height: 54px;}    
+.network_h1{position: relative;left: 20px;float: left;height: 60px;line-height: 60px;position:absolute;
+    text-align: center; margin-top: 0;          
+}
+.network-name{margin-left: 350px;margin-top:30px;position:absolute;height: 30px;width: 150px;}
+.network-field{margin-left: 520px;top:30px;position: relative;height: 25px;width: 200px;}
+.network-field_action{margin-left:810px;top:0;position: relative;height: 30px;width: 60px;}
+.network-top{background-color:white;width: 1300px;height: 80px;position:absolute;
+text-align: center;top: 0;padding: 1px;left: 20px;}
+.network-create{height: 30px;width: 100px;position: absolute;margin-left: 1110px;top:35px;}
+.network-delete{height: 30px;width: 100px;position: absolute;margin-left: 1220px;top:30px;}
+.tr2{height: 60px;width: 1300px;border: 1px solid rgb(182, 181, 181);padding: 1px;position:absolute;
+left: 20px;top: 80px;background-color: rgb(222, 223, 221);}
+.tr1{height: 60px;width: 1300px;border: 1px solid rgb(182, 181, 181);padding: 1px;
+position:absolute;left: 20px;top: 140px;background-color: rgb(249, 250, 249);}
+.pro_tenant{text-align: center;left: 50px;position: relative;margin-top: 50%;height: 60px;line-height: 60px;width: 40px;}
+.pro_name{text-align: center;left: 100px;position: relative;margin-top: 50%;width: 70px;}
+.pro_subnets{text-align: center;left: 150px;position: relative;margin-top: 50%;width: 80px;}
+.pro_subnets1{text-align: center;left: 150px;position: relative;margin-top: 50%;width: 130px;}
+.pro_agents{text-align: center;left:350px;position: relative;margin-top: 50%;width: 120px;}
+.pro_agents1{text-align: center;left:300px;position: relative;margin-top: 50%;width: 120px;}
+.pro_shared{text-align: center;left: 400px;position: relative;margin-top: 50%;width: 40px;}
+.pro_shared1{text-align: center;left: 350px;position: relative;margin-top: 50%;width: 40px;}
+.pro_external{text-align: center;left: 450px;position: relative;margin-top: 50%;width: 80px;}
+.pro_status{text-align: center;left: 500px;position: relative;margin-top: 50%;width: 40px;}
+.pro_status1{text-align: center;left: 450px;position: relative;margin-top: 50%;width: 40px;}
+.pro_state{text-align: center;left: 550px;position: relative;margin-top: 50%;width: 80px;}
+.pro_state1{text-align: center;left: 500px;position: relative;margin-top: 50%;width: 40px;}
+.pro_action{text-align: center;left: 600px;position: relative;margin-top: 50%;width: 40px;}
+.pro_action1{text-align: center;left: 580px;position: relative;margin-top: 50%;width: 40px;}

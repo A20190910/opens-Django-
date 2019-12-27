@@ -24,9 +24,7 @@ urlpatterns = [
     url(r'^index',view.index),
     url(r'^image',view.image),
     url(r'^network',view.network),
-    #url(r'^addnetwork',view.addnetwork),
-    url(r'instance1',view.instance),
-    #url(r'a',view.a),
-   #url(r'addinstance',view.addinstance),
+    url(r'^instance1',view.instance),
+    url(r'^create_ins',view.create_ins),
     url(r'^loginout',view.loginout)
 ]
